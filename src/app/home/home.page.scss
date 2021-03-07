@@ -1,0 +1,151 @@
+.main-div{
+  h1{
+    font-size: 1.7rem;
+  }
+  .list{
+    margin-top: 30px;
+    ion-item:part(native){
+      padding: 0;
+    }
+    ion-item{
+      margin-top: 20px;
+      color: #3b3b3b;
+      --border-color: rgba(180, 180, 180, 0.952);
+      ion-label{
+        font-size: 1.2rem;
+        font-weight: 500;
+        P{
+          font-size: 0.8rem;
+          margin-top: 5px;
+        }
+      }
+      p.general{
+        color: rgb(255, 0, 0);
+      }
+      p.album{
+        color: rgb(0, 161, 27);
+      }
+      p.pcard{
+        color: rgb(145, 0, 171);
+      }
+      p.pbook{
+        color: rgb(13, 158, 255);
+      }
+      p.amount{
+        font-weight: 700;
+      }
+    }
+    ion-item-sliding:last-child{
+      margin-bottom: 30px;
+    }
+    ion-item-sliding.item-sliding-active-option-end ion-item{
+      padding-right: 20px;
+    }
+    ion-item-option{
+      border-radius: 20px;
+      height: 38px;
+      width: 38px;
+      margin-top: 40px;
+      margin-trim: 4px;
+    }
+  }
+  ion-fab-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;  
+  }
+}
+
+.my-custom-class {
+  --background: #eee1e1;
+}
+//////////////////////////////////////////////////////////
+ion-content {
+  --background: rgba(239, 231, 255, 0.931);
+}
+
+ion-item {
+  // --background: #fff3f3;
+  h2 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+  }
+}
+
+ion-item:last-of-type {
+  div {
+    padding-bottom: 10px;
+  }
+   border-radius: 0 0 20% 20% ;
+}
+
+
+
+// ::ng-deep .searchbar-search-icon {
+//   color: #316dd0 !important;
+// }
+
+
+// ion-card {
+//   padding: 10px;
+//   box-shadow: none;
+//   box-shadow: 0px 3px 45px 0px rgba(172, 172, 172, 0.972);
+//   border-radius: 30px;
+
+//   ion-img {
+//     width: 200px;
+//     margin: 0 auto;
+//   }
+// }
+
+/////////////////
+.item-info {
+  p {
+      font-size: 16px;
+  }
+
+  p:nth-child(1) {
+      color: #434343;
+  }
+  p:nth-child(2) {
+      color: #919191;
+  }
+  p:nth-child(3) {
+      color: var(--ion-color-primary);
+  }
+
+  .main-button {
+      --border-radius: 5px;
+      margin: 10px 0 0 0;
+  }
+
+  .main-button::after {
+      box-shadow: none !important;
+  }
+}
+
+//////flower
+.cover {
+  img {
+    border-radius: 25%;
+  }
+}
+
+  ion-card {
+    box-shadow: none;
+    border-radius: 30px;
+
+  //   .cover {
+  //     img {
+  //       border-radius: 25%;
+  //     }
+  //   }
+
+    ion-card-content {
+      padding: 0;
+    }
+   }
+  
+
+

@@ -1,0 +1,67 @@
+<ion-header class="ion-no-border">
+  <ion-item lines="none">
+    <ion-col class="ion-text-right">
+      <ion-button fill="clear" color="Dark">
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-item >
+  <ion-item lines="none">
+    <div class="ion-padding-start ion-padding-bottom ">
+      <ion-label>
+        <h1>ยินดีตอนรับ <ion-icon name="medical"></ion-icon></h1>
+        <p> Pre-Order Products <ion-icon color="danger" name="heart"></ion-icon></p>
+      </ion-label>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="2">
+          <ion-button color="light" fill="clear"></ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-div ion-padding">
+    <h1 class="ion-padding">รายการพรีออเดอร์สินค้า</h1>
+
+    <div class="list">
+      <ion-card class="ion-padding">
+        <ion-card-content>
+          <ion-row class="ion-align-items-center">
+      <ion-item-sliding *ngFor="let transaction of productTransactions">
+        <ion-item>
+          <ion-col size="3">
+            <div class="cover">
+              <img src="assets/f3.png">
+            </div>
+          </ion-col>
+          <ion-col >
+            {{transaction.title}}
+            <p [ngClass]="{general: transaction.type =='general', album: transaction.type =='album', pcard: transaction.type =='pcard',pbook: transaction.type =='pbook'}">{{transaction.subTitle}}</p>
+          </ion-col>
+            <p class="amount" [ngClass]="{general: transaction.type =='general', album: transaction.type =='album', pcard: transaction.type =='pcard',pbook: transaction.type =='pbook'}">{{transaction.amount}} ชิ้น </p>
+        </ion-item>
+        
+        <ion-item-options side="end">
+          <ion-item-option color="danger" >
+            <ion-icon name="trash-outline" (click)="delete_transaction(transaction.id)"></ion-icon>
+          </ion-item-option>
+          <ion-item-option color="dark">
+            <ion-icon name="create-outline" routerLink="/add-edit-data/{{transaction.id}}"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      
+      </ion-item-sliding>
+    </ion-row>
+    </ion-card-content>
+    </ion-card>
+      <img src="assets/15-camomile-png-image.png">
+    </div>
+    
+    <ion-fab-button color="dark">
+      <ion-icon name="add-outline" routerLink="/add-edit-data/add"></ion-icon>
+    </ion-fab-button>
+
+  </div>
+</ion-content>
